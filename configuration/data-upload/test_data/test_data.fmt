@@ -1,0 +1,6 @@
+13.0
+4
+1  SQLCHAR  0  21  "\t"  1   id                ""
+2  SQLCHAR  0  10  "\t"  2   certificate_type  SQL_Latin1_General_CP1_CI_AS
+3  SQLCHAR  0  13  "\t"  3   commodity_code    SQL_Latin1_General_CP1_CI_AS
+4  SQLCHAR  0   0  "\n"  4   data              SQL_Latin1_General_CP1_CI_AS

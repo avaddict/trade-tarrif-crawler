@@ -1,0 +1,90 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/root.json",
+    "type": "array",
+    "title": "The Root Schema",
+    "items": {
+        "$id": "#/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+            "id",
+            "position",
+            "title",
+            "numeral",
+            "chapter_from",
+            "chapter_to",
+            "section_note_id"
+        ],
+        "properties": {
+            "id": {
+                "$id": "#/items/properties/id",
+                "type": "integer",
+                "title": "The Id Schema",
+                "default": 0,
+                "examples": [
+                    1
+                ]
+            },
+            "position": {
+                "$id": "#/items/properties/position",
+                "type": "integer",
+                "title": "The Position Schema",
+                "default": 0,
+                "examples": [
+                    1
+                ]
+            },
+            "title": {
+                "$id": "#/items/properties/title",
+                "type": "string",
+                "title": "The Title Schema",
+                "default": "",
+                "examples": [
+                    "Live animals; animal products"
+                ],
+                "pattern": "^(.*)$"
+            },
+            "numeral": {
+                "$id": "#/items/properties/numeral",
+                "type": "string",
+                "title": "The Numeral Schema",
+                "default": "",
+                "examples": [
+                    "I"
+                ],
+                "pattern": "^(.*)$"
+            },
+            "chapter_from": {
+                "$id": "#/items/properties/chapter_from",
+                "type": "string",
+                "title": "The Chapter_from Schema",
+                "default": "",
+                "examples": [
+                    "01"
+                ],
+                "pattern": "^(.*)$"
+            },
+            "chapter_to": {
+                "$id": "#/items/properties/chapter_to",
+                "type": "string",
+                "title": "The Chapter_to Schema",
+                "default": "",
+                "examples": [
+                    "05"
+                ],
+                "pattern": "^(.*)$"
+            },
+            "section_note_id": {
+                "$id": "#/items/properties/section_note_id",
+                "type": "integer",
+                "title": "The Section_note_id Schema",
+                "default": 0,
+                "examples": [
+                    1
+                ]
+            }
+        }
+    }
+}

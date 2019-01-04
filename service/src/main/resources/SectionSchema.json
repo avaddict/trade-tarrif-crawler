@@ -1,0 +1,223 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/root.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "required": [
+        "id",
+        "position",
+        "title",
+        "numeral",
+        "chapter_from",
+        "chapter_to",
+        "chapters",
+        "section_note",
+        "_response_info"
+    ],
+    "properties": {
+        "id": {
+            "$id": "#/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "position": {
+            "$id": "#/properties/position",
+            "type": "integer",
+            "title": "The Position Schema",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "title": {
+            "$id": "#/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "default": "",
+            "examples": [
+                "Live animals; animal products"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "numeral": {
+            "$id": "#/properties/numeral",
+            "type": "string",
+            "title": "The Numeral Schema",
+            "default": "",
+            "examples": [
+                "I"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "chapter_from": {
+            "$id": "#/properties/chapter_from",
+            "type": "string",
+            "title": "The Chapter_from Schema",
+            "default": "",
+            "examples": [
+                "01"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "chapter_to": {
+            "$id": "#/properties/chapter_to",
+            "type": "string",
+            "title": "The Chapter_to Schema",
+            "default": "",
+            "examples": [
+                "05"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "chapters": {
+            "$id": "#/properties/chapters",
+            "type": "array",
+            "title": "The Chapters Schema",
+            "items": {
+                "$id": "#/properties/chapters/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "required": [
+                    "description",
+                    "goods_nomenclature_item_id",
+                    "goods_nomenclature_sid",
+                    "headings_from",
+                    "headings_to",
+                    "formatted_description",
+                    "chapter_note_id"
+                ],
+                "properties": {
+                    "description": {
+                        "$id": "#/properties/chapters/items/properties/description",
+                        "type": "string",
+                        "title": "The Description Schema",
+                        "default": "",
+                        "examples": [
+                            "LIVE ANIMALS"
+                        ],
+                        "pattern": "^(.*)$"
+                    },
+                    "goods_nomenclature_item_id": {
+                        "$id": "#/properties/chapters/items/properties/goods_nomenclature_item_id",
+                        "type": "string",
+                        "title": "The Goods_nomenclature_item_id Schema",
+                        "default": "",
+                        "examples": [
+                            "0100000000"
+                        ],
+                        "pattern": "^(.*)$"
+                    },
+                    "goods_nomenclature_sid": {
+                        "$id": "#/properties/chapters/items/properties/goods_nomenclature_sid",
+                        "type": "integer",
+                        "title": "The Goods_nomenclature_sid Schema",
+                        "default": 0,
+                        "examples": [
+                            27623
+                        ]
+                    },
+                    "headings_from": {
+                        "$id": "#/properties/chapters/items/properties/headings_from",
+                        "type": "string",
+                        "title": "The Headings_from Schema",
+                        "default": "",
+                        "examples": [
+                            "0101"
+                        ],
+                        "pattern": "^(.*)$"
+                    },
+                    "headings_to": {
+                        "$id": "#/properties/chapters/items/properties/headings_to",
+                        "type": "string",
+                        "title": "The Headings_to Schema",
+                        "default": "",
+                        "examples": [
+                            "0106"
+                        ],
+                        "pattern": "^(.*)$"
+                    },
+                    "formatted_description": {
+                        "$id": "#/properties/chapters/items/properties/formatted_description",
+                        "type": "string",
+                        "title": "The Formatted_description Schema",
+                        "default": "",
+                        "examples": [
+                            "Live animals"
+                        ],
+                        "pattern": "^(.*)$"
+                    },
+                    "chapter_note_id": {
+                        "$id": "#/properties/chapters/items/properties/chapter_note_id",
+                        "type": "integer",
+                        "title": "The Chapter_note_id Schema",
+                        "default": 0,
+                        "examples": [
+                            46
+                        ]
+                    }
+                }
+            }
+        },
+        "section_note": {
+            "$id": "#/properties/section_note",
+            "type": "string",
+            "title": "The Section_note Schema",
+            "default": "",
+            "examples": [
+                "* 1\\. Any reference in this section to a particular genus or species of an animal, except where the context otherwise requires, includes a reference to the young of that genus or species.\r\n* 2\\. Except where the context otherwise requires, throughout the nomenclature any reference to 'dried' products also covers products which have been dehydrated, evaporated or freeze-dried.\r\n"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "_response_info": {
+            "$id": "#/properties/_response_info",
+            "type": "object",
+            "title": "The _response_info Schema",
+            "required": [
+                "links"
+            ],
+            "properties": {
+                "links": {
+                    "$id": "#/properties/_response_info/properties/links",
+                    "type": "array",
+                    "title": "The Links Schema",
+                    "items": {
+                        "$id": "#/properties/_response_info/properties/links/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "required": [
+                            "rel",
+                            "href"
+                        ],
+                        "properties": {
+                            "rel": {
+                                "$id": "#/properties/_response_info/properties/links/items/properties/rel",
+                                "type": "string",
+                                "title": "The Rel Schema",
+                                "default": "",
+                                "examples": [
+                                    "self"
+                                ],
+                                "pattern": "^(.*)$"
+                            },
+                            "href": {
+                                "$id": "#/properties/_response_info/properties/links/items/properties/href",
+                                "type": "string",
+                                "title": "The Href Schema",
+                                "default": "",
+                                "examples": [
+                                    "/trade-tariff/sections/1.json"
+                                ],
+                                "pattern": "^(.*)$"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

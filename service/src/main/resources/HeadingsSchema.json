@@ -1,0 +1,353 @@
+{
+   "definitions": {},
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "$id": "http://example.com/root.json",
+   "type": "object",
+   "title": "The Root Schema",
+   "required": [
+     "goods_nomenclature_item_id",
+     "description",
+     "bti_url",
+     "formatted_description",
+     "footnotes",
+     "chapter",
+     "section",
+     "commodities",
+     "_response_info"
+   ],
+   "properties": {
+     "goods_nomenclature_item_id": {
+       "$id": "#/properties/goods_nomenclature_item_id",
+       "type": "string",
+       "title": "The Goods_nomenclature_item_id Schema",
+       "default": "",
+       "examples": [
+         "0102000000"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "description": {
+       "$id": "#/properties/description",
+       "type": "string",
+       "title": "The Description Schema",
+       "default": "",
+       "examples": [
+         "Live bovine animals"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "bti_url": {
+       "$id": "#/properties/bti_url",
+       "type": "string",
+       "title": "The Bti_url Schema",
+       "default": "",
+       "examples": [
+         "http://ec.europa.eu/taxation_customs/dds2/ebti/ebti_consultation.jsp?Lang=en&nomenc=0102000000&Expand=true"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "formatted_description": {
+       "$id": "#/properties/formatted_description",
+       "type": "string",
+       "title": "The Formatted_description Schema",
+       "default": "",
+       "examples": [
+         "Live bovine animals"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "footnotes": {
+       "$id": "#/properties/footnotes",
+       "type": "array",
+       "title": "The Footnotes Schema",
+       "items": {
+         "$id": "#/properties/footnotes/items",
+         "type": "object",
+         "title": "The Items Schema",
+         "required": [
+           "code",
+           "description",
+           "formatted_description"
+         ],
+         "properties": {
+           "code": {
+             "$id": "#/properties/footnotes/items/properties/code",
+             "type": "string",
+             "title": "The Code Schema",
+             "default": "",
+             "examples": [
+               "TN701"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "description": {
+             "$id": "#/properties/footnotes/items/properties/description",
+             "type": "string",
+             "title": "The Description Schema",
+             "default": "",
+             "examples": [
+               "According to  the Council Regulation (EU) No 692/2014 (OJ L183, p. 9) it shall be prohibited to import into European Union goods originating in Crimea or Sevastopol.\nThe prohibition shall not apply in respect of: \n(a) the execution until 26 September 2014, of trade contracts concluded before 25 June 2014, or of ancillary contracts necessary for the execution of such contracts, provided that the natural or legal persons, entity or body seeking to perform the contract have notified, at least 10 working days in advance, the activity or transaction to the competent authority of the Member State in which they are established. \n(b) goods originating in Crimea or Sevastopol which have been made available to the Ukrainian authorities for examination, for which compliance with the conditions conferring entitlement to preferential origin has been verified and for which a certificate of origin has been issued in accordance with Regulation (EU) No 978/2012 and Regulation (EU) No 374/2014 or in accordance with the EU-Ukraine Association Agreement."
+             ],
+             "pattern": "^(.*)$"
+           },
+           "formatted_description": {
+             "$id": "#/properties/footnotes/items/properties/formatted_description",
+             "type": "string",
+             "title": "The Formatted_description Schema",
+             "default": "",
+             "examples": [
+               "According to  the Council Regulation (EU) No 692/2014 (OJ L183, p. 9) it shall be prohibited to import into European Union goods originating in Crimea or Sevastopol.<br/>The prohibition shall not apply in respect of: <br/>(a) the execution until 26 September 2014, of trade contracts concluded before 25 June 2014, or of ancillary contracts necessary for the execution of such contracts, provided that the natural or legal persons, entity or body seeking to perform the contract have notified, at least 10 working days in advance, the activity or transaction to the competent authority of the Member State in which they are established. <br/>(b) goods originating in Crimea or Sevastopol which have been made available to the Ukrainian authorities for examination, for which compliance with the conditions conferring entitlement to preferential origin has been verified and for which a certificate of origin has been issued in accordance with Regulation (EU) No 978/2012 and Regulation (EU) No 374/2014 or in accordance with the EU-Ukraine Association Agreement."
+             ],
+             "pattern": "^(.*)$"
+           }
+         }
+       }
+     },
+     "chapter": {
+       "$id": "#/properties/chapter",
+       "type": "object",
+       "title": "The Chapter Schema",
+       "required": [
+         "goods_nomenclature_item_id",
+         "description",
+         "formatted_description",
+         "chapter_note"
+       ],
+       "properties": {
+         "goods_nomenclature_item_id": {
+           "$id": "#/properties/chapter/properties/goods_nomenclature_item_id",
+           "type": "string",
+           "title": "The Goods_nomenclature_item_id Schema",
+           "default": "",
+           "examples": [
+             "0100000000"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "description": {
+           "$id": "#/properties/chapter/properties/description",
+           "type": "string",
+           "title": "The Description Schema",
+           "default": "",
+           "examples": [
+             "LIVE ANIMALS"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "formatted_description": {
+           "$id": "#/properties/chapter/properties/formatted_description",
+           "type": "string",
+           "title": "The Formatted_description Schema",
+           "default": "",
+           "examples": [
+             "Live animals"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "chapter_note": {
+           "$id": "#/properties/chapter/properties/chapter_note",
+           "type": "string",
+           "title": "The Chapter_note Schema",
+           "default": "",
+           "examples": [
+             "* 1\\. This chapter covers all live animals except:\r\n  * (a) fish and crustaceans, molluscs and other aquatic invertebrates, of heading 0301, 0306, 0307 or 0308;\r\n  * (b) cultures of micro-organisms and other products of heading 3002; and\r\n  * (c) animals of heading 9508."
+           ],
+           "pattern": "^(.*)$"
+         }
+       }
+     },
+     "section": {
+       "$id": "#/properties/section",
+       "type": "object",
+       "title": "The Section Schema",
+       "required": [
+         "title",
+         "numeral",
+         "position",
+         "section_note"
+       ],
+       "properties": {
+         "title": {
+           "$id": "#/properties/section/properties/title",
+           "type": "string",
+           "title": "The Title Schema",
+           "default": "",
+           "examples": [
+             "Live animals; animal products"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "numeral": {
+           "$id": "#/properties/section/properties/numeral",
+           "type": "string",
+           "title": "The Numeral Schema",
+           "default": "",
+           "examples": [
+             "I"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "position": {
+           "$id": "#/properties/section/properties/position",
+           "type": "integer",
+           "title": "The Position Schema",
+           "default": 0,
+           "examples": [
+           ]
+         },
+         "section_note": {
+           "$id": "#/properties/section/properties/section_note",
+           "type": "string",
+           "title": "The Section_note Schema",
+           "default": "",
+           "examples": [
+             "* 1\\. Any reference in this section to a particular genus or species of an animal, except where the context otherwise requires, includes a reference to the young of that genus or species.\r\n* 2\\. Except where the context otherwise requires, throughout the nomenclature any reference to 'dried' products also covers products which have been dehydrated, evaporated or freeze-dried.\r\n"
+           ],
+           "pattern": "^(.*)$"
+         }
+       }
+     },
+     "commodities": {
+       "$id": "#/properties/commodities",
+       "type": "array",
+       "title": "The Commodities Schema",
+       "items": {
+         "$id": "#/properties/commodities/items",
+         "type": "object",
+         "title": "The Items Schema",
+         "required": [
+           "description",
+           "number_indents",
+           "goods_nomenclature_item_id",
+           "leaf",
+           "goods_nomenclature_sid",
+           "formatted_description",
+           "description_plain",
+           "parent_sid"
+         ],
+         "properties": {
+           "description": {
+             "$id": "#/properties/commodities/items/properties/description",
+             "type": "string",
+             "title": "The Description Schema",
+             "default": "",
+             "examples": [
+               "Cattle"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "number_indents": {
+             "$id": "#/properties/commodities/items/properties/number_indents",
+             "type": "integer",
+             "title": "The Number_indents Schema",
+             "default": 0,
+             "examples": [
+             ]
+           },
+           "goods_nomenclature_item_id": {
+             "$id": "#/properties/commodities/items/properties/goods_nomenclature_item_id",
+             "type": "string",
+             "title": "The Goods_nomenclature_item_id Schema",
+             "default": "",
+             "examples": [
+               "0102210000"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "leaf": {
+             "$id": "#/properties/commodities/items/properties/leaf",
+             "type": "boolean",
+             "title": "The Leaf Schema",
+             "default": false,
+             "examples": [
+               false
+             ]
+           },
+           "goods_nomenclature_sid": {
+             "$id": "#/properties/commodities/items/properties/goods_nomenclature_sid",
+             "type": "integer",
+             "title": "The Goods_nomenclature_sid Schema",
+             "default": 0,
+             "examples": [
+             ]
+           },
+           "formatted_description": {
+             "$id": "#/properties/commodities/items/properties/formatted_description",
+             "type": "string",
+             "title": "The Formatted_description Schema",
+             "default": "",
+             "examples": [
+               "Cattle"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "description_plain": {
+             "$id": "#/properties/commodities/items/properties/description_plain",
+             "type": "string",
+             "title": "The Description_plain Schema",
+             "default": "",
+             "examples": [
+               "Cattle"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "parent_sid": {
+             "$id": "#/properties/commodities/items/properties/parent_sid",
+             "type": "null",
+             "title": "The Parent_sid Schema",
+             "default": null,
+             "examples": [
+               null
+             ]
+           }
+         }
+       }
+     },
+     "_response_info": {
+       "$id": "#/properties/_response_info",
+       "type": "object",
+       "title": "The _response_info Schema",
+       "required": [
+         "links"
+       ],
+       "properties": {
+         "links": {
+           "$id": "#/properties/_response_info/properties/links",
+           "type": "array",
+           "title": "The Links Schema",
+           "items": {
+             "$id": "#/properties/_response_info/properties/links/items",
+             "type": "object",
+             "title": "The Items Schema",
+             "required": [
+               "rel",
+               "href"
+             ],
+             "properties": {
+               "rel": {
+                 "$id": "#/properties/_response_info/properties/links/items/properties/rel",
+                 "type": "string",
+                 "title": "The Rel Schema",
+                 "default": "",
+                 "examples": [
+                   "self"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "href": {
+                 "$id": "#/properties/_response_info/properties/links/items/properties/href",
+                 "type": "string",
+                 "title": "The Href Schema",
+                 "default": "",
+                 "examples": [
+                   "/trade-tariff/headings/0102.json"
+                 ],
+                 "pattern": "^(.*)$"
+               }
+             }
+           }
+         }
+       }
+     }
+   }
+ }

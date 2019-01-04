@@ -1,0 +1,36 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="create_initial_schema_${lowercaseArtifact}" author="mkalinowski">
+        <createTable tableName="${serviceTableName}">
+            <column name="id" type="uniqueidentifier">
+                <constraints nullable="false"/>
+            </column>
+            <column name="document" type="nvarchar(max)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_updated" type="datetime" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <sql>
+            CREATE USER ${lowerArtifact}ServiceUser WITH PASSWORD = '${serviceDbPassword}';
+            REVOKE SELECT, INSERT, UPDATE, DELETE, EXECUTE, REFERENCES ON SCHEMA::DBO TO ${lowerArtifact}ServiceUser;
+#if (${SERVICE_GET} == 'true')
+            GRANT SELECT ON dbo.${lowercaseArtifact} TO ${lowerArtifact}ServiceUser;
+#end
+#if (${SERVICE_POST} == 'true')
+            GRANT INSERT ON dbo.${lowercaseArtifact} TO ${lowerArtifact}ServiceUser;
+#end
+#if (${SERVICE_PATCH} == 'true')
+            GRANT UPDATE ON dbo.${lowercaseArtifact} TO ${lowerArtifact}ServiceUser;
+#end
+#if (${SERVICE_DELETE} == 'true')
+            GRANT DELETE ON dbo.${lowercaseArtifact} TO ${lowerArtifact}ServiceUser;
+#end
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

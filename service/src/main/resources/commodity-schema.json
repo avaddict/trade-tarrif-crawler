@@ -1,0 +1,1093 @@
+ {
+   "definitions": {},
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "$id": "http://example.com/root.json",
+   "type": "object",
+   "title": "The Root Schema",
+   "required": [
+     "producline_suffix",
+     "description",
+     "number_indents",
+     "goods_nomenclature_item_id",
+     "bti_url",
+     "formatted_description",
+     "description_plain",
+     "consigned_from",
+     "basic_duty_rate",
+     "meursing_code",
+     "section",
+     "chapter",
+     "declarable",
+     "import_measures",
+     "export_measures",
+     "footnotes",
+     "heading",
+     "ancestors",
+     "_response_info"
+   ],
+   "properties": {
+     "producline_suffix": {
+       "$id": "#/properties/producline_suffix",
+       "type": "string",
+       "title": "The Producline_suffix Schema",
+       "default": "",
+       "examples": [
+         "80"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "description": {
+       "$id": "#/properties/description",
+       "type": "string",
+       "title": "The Description Schema",
+       "default": "",
+       "examples": [
+         "Heifers (female bovines that have never calved)"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "number_indents": {
+       "$id": "#/properties/number_indents",
+       "type": "integer",
+       "title": "The Number_indents Schema",
+       "default": 0,
+       "examples": [
+       ]
+     },
+     "goods_nomenclature_item_id": {
+       "$id": "#/properties/goods_nomenclature_item_id",
+       "type": "string",
+       "title": "The Goods_nomenclature_item_id Schema",
+       "default": "",
+       "examples": [
+         "0102211000"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "bti_url": {
+       "$id": "#/properties/bti_url",
+       "type": "string",
+       "title": "The Bti_url Schema",
+       "default": "",
+       "examples": [
+         "http://ec.europa.eu/taxation_customs/dds2/ebti/ebti_consultation.jsp?Lang=en&nomenc=0102211000&Expand=true"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "formatted_description": {
+       "$id": "#/properties/formatted_description",
+       "type": "string",
+       "title": "The Formatted_description Schema",
+       "default": "",
+       "examples": [
+         "Heifers (female bovines that have never calved)"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "description_plain": {
+       "$id": "#/properties/description_plain",
+       "type": "string",
+       "title": "The Description_plain Schema",
+       "default": "",
+       "examples": [
+         "Heifers (female bovines that have never calved)"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "consigned_from": {
+       "$id": "#/properties/consigned_from",
+       "type": "null",
+       "title": "The Consigned_from Schema",
+       "default": null,
+       "examples": [
+         null
+       ]
+     },
+     "basic_duty_rate": {
+       "$id": "#/properties/basic_duty_rate",
+       "type": "string",
+       "title": "The Basic_duty_rate Schema",
+       "default": "",
+       "examples": [
+         "<span title=' EUR'>0.00</span> %"
+       ],
+       "pattern": "^(.*)$"
+     },
+     "meursing_code": {
+       "$id": "#/properties/meursing_code",
+       "type": "boolean",
+       "title": "The Meursing_code Schema",
+       "default": false,
+       "examples": [
+         false
+       ]
+     },
+     "section": {
+       "$id": "#/properties/section",
+       "type": "object",
+       "title": "The Section Schema",
+       "required": [
+         "title",
+         "position",
+         "numeral",
+         "section_note"
+       ],
+       "properties": {
+         "title": {
+           "$id": "#/properties/section/properties/title",
+           "type": "string",
+           "title": "The Title Schema",
+           "default": "",
+           "examples": [
+             "Live animals; animal products"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "position": {
+           "$id": "#/properties/section/properties/position",
+           "type": "integer",
+           "title": "The Position Schema",
+           "default": 0,
+           "examples": [
+           ]
+         },
+         "numeral": {
+           "$id": "#/properties/section/properties/numeral",
+           "type": "string",
+           "title": "The Numeral Schema",
+           "default": "",
+           "examples": [
+             "I"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "section_note": {
+           "$id": "#/properties/section/properties/section_note",
+           "type": "string",
+           "title": "The Section_note Schema",
+           "default": "",
+           "examples": [
+             "* 1\\. Any reference in this section to a particular genus or species of an animal, except where the context otherwise requires, includes a reference to the young of that genus or species.\r\n* 2\\. Except where the context otherwise requires, throughout the nomenclature any reference to 'dried' products also covers products which have been dehydrated, evaporated or freeze-dried.\r\n"
+           ],
+           "pattern": "^(.*)$"
+         }
+       }
+     },
+     "chapter": {
+       "$id": "#/properties/chapter",
+       "type": "object",
+       "title": "The Chapter Schema",
+       "required": [
+         "goods_nomenclature_item_id",
+         "description",
+         "formatted_description",
+         "chapter_note"
+       ],
+       "properties": {
+         "goods_nomenclature_item_id": {
+           "$id": "#/properties/chapter/properties/goods_nomenclature_item_id",
+           "type": "string",
+           "title": "The Goods_nomenclature_item_id Schema",
+           "default": "",
+           "examples": [
+             "0100000000"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "description": {
+           "$id": "#/properties/chapter/properties/description",
+           "type": "string",
+           "title": "The Description Schema",
+           "default": "",
+           "examples": [
+             "LIVE ANIMALS"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "formatted_description": {
+           "$id": "#/properties/chapter/properties/formatted_description",
+           "type": "string",
+           "title": "The Formatted_description Schema",
+           "default": "",
+           "examples": [
+             "Live animals"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "chapter_note": {
+           "$id": "#/properties/chapter/properties/chapter_note",
+           "type": "string",
+           "title": "The Chapter_note Schema",
+           "default": "",
+           "examples": [
+             "* 1\\. This chapter covers all live animals except:\r\n  * (a) fish and crustaceans, molluscs and other aquatic invertebrates, of heading 0301, 0306, 0307 or 0308;\r\n  * (b) cultures of micro-organisms and other products of heading 3002; and\r\n  * (c) animals of heading 9508."
+           ],
+           "pattern": "^(.*)$"
+         }
+       }
+     },
+     "declarable": {
+       "$id": "#/properties/declarable",
+       "type": "boolean",
+       "title": "The Declarable Schema",
+       "default": false,
+       "examples": [
+         true
+       ]
+     },
+     "import_measures": {
+       "$id": "#/properties/import_measures",
+       "type": "array",
+       "title": "The Import_measures Schema",
+       "items": {
+         "$id": "#/properties/import_measures/items",
+         "type": "object",
+         "title": "The Items Schema",
+         "required": [
+           "id",
+           "origin",
+           "effective_start_date",
+           "effective_end_date",
+           "import",
+           "measure_conditions",
+           "excluded_countries",
+           "footnotes",
+           "order_number",
+           "excise",
+           "vat",
+           "measure_type",
+           "duty_expression",
+           "geographical_area"
+         ],
+         "properties": {
+           "id": {
+             "$id": "#/properties/import_measures/items/properties/id",
+             "type": "integer",
+             "title": "The Id Schema",
+             "default": 0,
+             "examples": [
+               -405875
+             ]
+           },
+           "origin": {
+             "$id": "#/properties/import_measures/items/properties/origin",
+             "type": "string",
+             "title": "The Origin Schema",
+             "default": "",
+             "examples": [
+               "uk"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "effective_start_date": {
+             "$id": "#/properties/import_measures/items/properties/effective_start_date",
+             "type": "string",
+             "title": "The Effective_start_date Schema",
+             "default": "",
+             "examples": [
+               "2015-02-01T00:00:00.000Z"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "effective_end_date": {
+             "$id": "#/properties/import_measures/items/properties/effective_end_date",
+             "type": "null",
+             "title": "The Effective_end_date Schema",
+             "default": null,
+             "examples": [
+               null
+             ]
+           },
+           "import": {
+             "$id": "#/properties/import_measures/items/properties/import",
+             "type": "boolean",
+             "title": "The Import Schema",
+             "default": false,
+             "examples": [
+               true
+             ]
+           },
+           "measure_conditions": {
+             "$id": "#/properties/import_measures/items/properties/measure_conditions",
+             "type": "array",
+             "title": "The Measure_conditions Schema"
+           },
+           "excluded_countries": {
+             "$id": "#/properties/import_measures/items/properties/excluded_countries",
+             "type": "array",
+             "title": "The Excluded_countries Schema"
+           },
+           "footnotes": {
+             "$id": "#/properties/import_measures/items/properties/footnotes",
+             "type": "array",
+             "title": "The Footnotes Schema",
+             "items": {
+               "$id": "#/properties/import_measures/items/properties/footnotes/items",
+               "type": "object",
+               "title": "The Items Schema",
+               "required": [
+                 "code",
+                 "description",
+                 "formatted_description"
+               ],
+               "properties": {
+                 "code": {
+                   "$id": "#/properties/import_measures/items/properties/footnotes/items/properties/code",
+                   "type": "string",
+                   "title": "The Code Schema",
+                   "default": "",
+                   "examples": [
+                     "03026"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "description": {
+                   "$id": "#/properties/import_measures/items/properties/footnotes/items/properties/description",
+                   "type": "string",
+                   "title": "The Description Schema",
+                   "default": "",
+                   "examples": [
+                     "UK VAT zero rate"
+                   ],
+                   "pattern": "^(.*)$"
+                 },
+                 "formatted_description": {
+                   "$id": "#/properties/import_measures/items/properties/footnotes/items/properties/formatted_description",
+                   "type": "string",
+                   "title": "The Formatted_description Schema",
+                   "default": "",
+                   "examples": [
+                     "UK VAT zero rate"
+                   ],
+                   "pattern": "^(.*)$"
+                 }
+               }
+             }
+           },
+           "order_number": {
+             "$id": "#/properties/import_measures/items/properties/order_number",
+             "type": "null",
+             "title": "The Order_number Schema",
+             "default": null,
+             "examples": [
+               null
+             ]
+           },
+           "excise": {
+             "$id": "#/properties/import_measures/items/properties/excise",
+             "type": "boolean",
+             "title": "The Excise Schema",
+             "default": false,
+             "examples": [
+               false
+             ]
+           },
+           "vat": {
+             "$id": "#/properties/import_measures/items/properties/vat",
+             "type": "boolean",
+             "title": "The Vat Schema",
+             "default": false,
+             "examples": [
+               true
+             ]
+           },
+           "measure_type": {
+             "$id": "#/properties/import_measures/items/properties/measure_type",
+             "type": "object",
+             "title": "The Measure_type Schema",
+             "required": [
+               "id",
+               "description"
+             ],
+             "properties": {
+               "id": {
+                 "$id": "#/properties/import_measures/items/properties/measure_type/properties/id",
+                 "type": "string",
+                 "title": "The Id Schema",
+                 "default": "",
+                 "examples": [
+                   "VTZ"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "description": {
+                 "$id": "#/properties/import_measures/items/properties/measure_type/properties/description",
+                 "type": "string",
+                 "title": "The Description Schema",
+                 "default": "",
+                 "examples": [
+                   "VAT zero rate"
+                 ],
+                 "pattern": "^(.*)$"
+               }
+             }
+           },
+           "duty_expression": {
+             "$id": "#/properties/import_measures/items/properties/duty_expression",
+             "type": "object",
+             "title": "The Duty_expression Schema",
+             "required": [
+               "base",
+               "formatted_base"
+             ],
+             "properties": {
+               "base": {
+                 "$id": "#/properties/import_measures/items/properties/duty_expression/properties/base",
+                 "type": "string",
+                 "title": "The Base Schema",
+                 "default": "",
+                 "examples": [
+                   "0.00 %"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "formatted_base": {
+                 "$id": "#/properties/import_measures/items/properties/duty_expression/properties/formatted_base",
+                 "type": "string",
+                 "title": "The Formatted_base Schema",
+                 "default": "",
+                 "examples": [
+                   "<span title=' EUR'>0.00</span> %"
+                 ],
+                 "pattern": "^(.*)$"
+               }
+             }
+           },
+           "geographical_area": {
+             "$id": "#/properties/import_measures/items/properties/geographical_area",
+             "type": "object",
+             "title": "The Geographical_area Schema",
+             "required": [
+               "id",
+               "description",
+               "children_geographical_areas"
+             ],
+             "properties": {
+               "id": {
+                 "$id": "#/properties/import_measures/items/properties/geographical_area/properties/id",
+                 "type": "string",
+                 "title": "The Id Schema",
+                 "default": "",
+                 "examples": [
+                   "1011"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "description": {
+                 "$id": "#/properties/import_measures/items/properties/geographical_area/properties/description",
+                 "type": "string",
+                 "title": "The Description Schema",
+                 "default": "",
+                 "examples": [
+                   "ERGA OMNES"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "children_geographical_areas": {
+                 "$id": "#/properties/import_measures/items/properties/geographical_area/properties/children_geographical_areas",
+                 "type": "array",
+                 "title": "The Children_geographical_areas Schema",
+                 "items": {
+                   "$id": "#/properties/import_measures/items/properties/geographical_area/properties/children_geographical_areas/items",
+                   "type": "object",
+                   "title": "The Items Schema",
+                   "required": [
+                     "id",
+                     "description"
+                   ],
+                   "properties": {
+                     "id": {
+                       "$id": "#/properties/import_measures/items/properties/geographical_area/properties/children_geographical_areas/items/properties/id",
+                       "type": "string",
+                       "title": "The Id Schema",
+                       "default": "",
+                       "examples": [
+                         "AD"
+                       ],
+                       "pattern": "^(.*)$"
+                     },
+                     "description": {
+                       "$id": "#/properties/import_measures/items/properties/geographical_area/properties/children_geographical_areas/items/properties/description",
+                       "type": "string",
+                       "title": "The Description Schema",
+                       "default": "",
+                       "examples": [
+                         "Andorra"
+                       ],
+                       "pattern": "^(.*)$"
+                     }
+                   }
+                 }
+               }
+             }
+           }
+         }
+       }
+     },
+     "export_measures": {
+       "$id": "#/properties/export_measures",
+       "type": "array",
+       "title": "The Export_measures Schema",
+       "items": {
+         "$id": "#/properties/export_measures/items",
+         "type": "object",
+         "title": "The Items Schema",
+         "required": [
+           "id",
+           "origin",
+           "effective_start_date",
+           "effective_end_date",
+           "import",
+           "measure_conditions",
+           "excluded_countries",
+           "footnotes",
+           "order_number",
+           "excise",
+           "vat",
+           "measure_type",
+           "duty_expression",
+           "legal_act",
+           "geographical_area"
+         ],
+         "properties": {
+           "id": {
+             "$id": "#/properties/export_measures/items/properties/id",
+             "type": "integer",
+             "title": "The Id Schema",
+             "default": 0,
+             "examples": [
+             ]
+           },
+           "origin": {
+             "$id": "#/properties/export_measures/items/properties/origin",
+             "type": "string",
+             "title": "The Origin Schema",
+             "default": "",
+             "examples": [
+               "eu"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "effective_start_date": {
+             "$id": "#/properties/export_measures/items/properties/effective_start_date",
+             "type": "string",
+             "title": "The Effective_start_date Schema",
+             "default": "",
+             "examples": [
+               "2008-01-01T00:00:00.000Z"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "effective_end_date": {
+             "$id": "#/properties/export_measures/items/properties/effective_end_date",
+             "type": "null",
+             "title": "The Effective_end_date Schema",
+             "default": null,
+             "examples": [
+               null
+             ]
+           },
+           "import": {
+             "$id": "#/properties/export_measures/items/properties/import",
+             "type": "boolean",
+             "title": "The Import Schema",
+             "default": false,
+             "examples": [
+               true
+             ]
+           },
+           "measure_conditions": {
+             "$id": "#/properties/export_measures/items/properties/measure_conditions",
+             "type": "array",
+             "title": "The Measure_conditions Schema"
+           },
+           "excluded_countries": {
+             "$id": "#/properties/export_measures/items/properties/excluded_countries",
+             "type": "array",
+             "title": "The Excluded_countries Schema"
+           },
+           "footnotes": {
+             "$id": "#/properties/export_measures/items/properties/footnotes",
+             "type": "array",
+             "title": "The Footnotes Schema"
+           },
+           "order_number": {
+             "$id": "#/properties/export_measures/items/properties/order_number",
+             "type": "null",
+             "title": "The Order_number Schema",
+             "default": null,
+             "examples": [
+               null
+             ]
+           },
+           "excise": {
+             "$id": "#/properties/export_measures/items/properties/excise",
+             "type": "boolean",
+             "title": "The Excise Schema",
+             "default": false,
+             "examples": [
+               false
+             ]
+           },
+           "vat": {
+             "$id": "#/properties/export_measures/items/properties/vat",
+             "type": "boolean",
+             "title": "The Vat Schema",
+             "default": false,
+             "examples": [
+               false
+             ]
+           },
+           "measure_type": {
+             "$id": "#/properties/export_measures/items/properties/measure_type",
+             "type": "object",
+             "title": "The Measure_type Schema",
+             "required": [
+               "id",
+               "description"
+             ],
+             "properties": {
+               "id": {
+                 "$id": "#/properties/export_measures/items/properties/measure_type/properties/id",
+                 "type": "string",
+                 "title": "The Id Schema",
+                 "default": "",
+                 "examples": [
+                   "109"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "description": {
+                 "$id": "#/properties/export_measures/items/properties/measure_type/properties/description",
+                 "type": "string",
+                 "title": "The Description Schema",
+                 "default": "",
+                 "examples": [
+                   "Supplementary unit"
+                 ],
+                 "pattern": "^(.*)$"
+               }
+             }
+           },
+           "duty_expression": {
+             "$id": "#/properties/export_measures/items/properties/duty_expression",
+             "type": "object",
+             "title": "The Duty_expression Schema",
+             "required": [
+               "base",
+               "formatted_base"
+             ],
+             "properties": {
+               "base": {
+                 "$id": "#/properties/export_measures/items/properties/duty_expression/properties/base",
+                 "type": "string",
+                 "title": "The Base Schema",
+                 "default": "",
+                 "examples": [
+                   "p/st"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "formatted_base": {
+                 "$id": "#/properties/export_measures/items/properties/duty_expression/properties/formatted_base",
+                 "type": "string",
+                 "title": "The Formatted_base Schema",
+                 "default": "",
+                 "examples": [
+                   "<abbr title='Number of items'>p/st</abbr>"
+                 ],
+                 "pattern": "^(.*)$"
+               }
+             }
+           },
+           "legal_act": {
+             "$id": "#/properties/export_measures/items/properties/legal_act",
+             "type": "object",
+             "title": "The Legal_act Schema",
+             "required": [
+               "generating_regulation_code",
+               "url",
+               "suspended",
+               "validity_end_date",
+               "validity_start_date",
+               "officialjournal_number",
+               "officialjournal_page",
+               "published_date"
+             ],
+             "properties": {
+               "generating_regulation_code": {
+                 "$id": "#/properties/export_measures/items/properties/legal_act/properties/generating_regulation_code",
+                 "type": "string",
+                 "title": "The Generating_regulation_code Schema",
+                 "default": "",
+                 "examples": [
+                   "R2658/87"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "url": {
+                 "$id": "#/properties/export_measures/items/properties/legal_act/properties/url",
+                 "type": "string",
+                 "title": "The Url Schema",
+                 "default": "",
+                 "examples": [
+                   "http://eur-lex.europa.eu/search.html?instInvStatus=ALL&or0=DN%3D31987R2658*,DN-old%3D31987R2658*&DTC=false&type=advanced"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "suspended": {
+                 "$id": "#/properties/export_measures/items/properties/legal_act/properties/suspended",
+                 "type": "boolean",
+                 "title": "The Suspended Schema",
+                 "default": false,
+                 "examples": [
+                   false
+                 ]
+               },
+               "validity_end_date": {
+                 "$id": "#/properties/export_measures/items/properties/legal_act/properties/validity_end_date",
+                 "type": "null",
+                 "title": "The Validity_end_date Schema",
+                 "default": null,
+                 "examples": [
+                   null
+                 ]
+               },
+               "validity_start_date": {
+                 "$id": "#/properties/export_measures/items/properties/legal_act/properties/validity_start_date",
+                 "type": "string",
+                 "title": "The Validity_start_date Schema",
+                 "default": "",
+                 "examples": [
+                   "1988-01-01T00:00:00.000Z"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "officialjournal_number": {
+                 "$id": "#/properties/export_measures/items/properties/legal_act/properties/officialjournal_number",
+                 "type": "string",
+                 "title": "The Officialjournal_number Schema",
+                 "default": "",
+                 "examples": [
+                   "L 256"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "officialjournal_page": {
+                 "$id": "#/properties/export_measures/items/properties/legal_act/properties/officialjournal_page",
+                 "type": "null",
+                 "title": "The Officialjournal_page Schema",
+                 "default": null,
+                 "examples": [
+                   null
+                 ]
+               },
+               "published_date": {
+                 "$id": "#/properties/export_measures/items/properties/legal_act/properties/published_date",
+                 "type": "string",
+                 "title": "The Published_date Schema",
+                 "default": "",
+                 "examples": [
+                   "1987-09-07"
+                 ],
+                 "pattern": "^(.*)$"
+               }
+             }
+           },
+           "geographical_area": {
+             "$id": "#/properties/export_measures/items/properties/geographical_area",
+             "type": "object",
+             "title": "The Geographical_area Schema",
+             "required": [
+               "id",
+               "description",
+               "children_geographical_areas"
+             ],
+             "properties": {
+               "id": {
+                 "$id": "#/properties/export_measures/items/properties/geographical_area/properties/id",
+                 "type": "string",
+                 "title": "The Id Schema",
+                 "default": "",
+                 "examples": [
+                   "1011"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "description": {
+                 "$id": "#/properties/export_measures/items/properties/geographical_area/properties/description",
+                 "type": "string",
+                 "title": "The Description Schema",
+                 "default": "",
+                 "examples": [
+                   "ERGA OMNES"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "children_geographical_areas": {
+                 "$id": "#/properties/export_measures/items/properties/geographical_area/properties/children_geographical_areas",
+                 "type": "array",
+                 "title": "The Children_geographical_areas Schema",
+                 "items": {
+                   "$id": "#/properties/export_measures/items/properties/geographical_area/properties/children_geographical_areas/items",
+                   "type": "object",
+                   "title": "The Items Schema",
+                   "required": [
+                     "id",
+                     "description"
+                   ],
+                   "properties": {
+                     "id": {
+                       "$id": "#/properties/export_measures/items/properties/geographical_area/properties/children_geographical_areas/items/properties/id",
+                       "type": "string",
+                       "title": "The Id Schema",
+                       "default": "",
+                       "examples": [
+                         "AD"
+                       ],
+                       "pattern": "^(.*)$"
+                     },
+                     "description": {
+                       "$id": "#/properties/export_measures/items/properties/geographical_area/properties/children_geographical_areas/items/properties/description",
+                       "type": "string",
+                       "title": "The Description Schema",
+                       "default": "",
+                       "examples": [
+                         "Andorra"
+                       ],
+                       "pattern": "^(.*)$"
+                     }
+                   }
+                 }
+               }
+             }
+           }
+         }
+       }
+     },
+     "footnotes": {
+       "$id": "#/properties/footnotes",
+       "type": "array",
+       "title": "The Footnotes Schema",
+       "items": {
+         "$id": "#/properties/footnotes/items",
+         "type": "object",
+         "title": "The Items Schema",
+         "required": [
+           "code",
+           "description",
+           "formatted_description"
+         ],
+         "properties": {
+           "code": {
+             "$id": "#/properties/footnotes/items/properties/code",
+             "type": "string",
+             "title": "The Code Schema",
+             "default": "",
+             "examples": [
+               "TN701"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "description": {
+             "$id": "#/properties/footnotes/items/properties/description",
+             "type": "string",
+             "title": "The Description Schema",
+             "default": "",
+             "examples": [
+               "According to  the Council Regulation (EU) No 692/2014 (OJ L183, p. 9) it shall be prohibited to import into European Union goods originating in Crimea or Sevastopol.\nThe prohibition shall not apply in respect of: \n(a) the execution until 26 September 2014, of trade contracts concluded before 25 June 2014, or of ancillary contracts necessary for the execution of such contracts, provided that the natural or legal persons, entity or body seeking to perform the contract have notified, at least 10 working days in advance, the activity or transaction to the competent authority of the Member State in which they are established. \n(b) goods originating in Crimea or Sevastopol which have been made available to the Ukrainian authorities for examination, for which compliance with the conditions conferring entitlement to preferential origin has been verified and for which a certificate of origin has been issued in accordance with Regulation (EU) No 978/2012 and Regulation (EU) No 374/2014 or in accordance with the EU-Ukraine Association Agreement."
+             ],
+             "pattern": "^(.*)$"
+           },
+           "formatted_description": {
+             "$id": "#/properties/footnotes/items/properties/formatted_description",
+             "type": "string",
+             "title": "The Formatted_description Schema",
+             "default": "",
+             "examples": [
+               "According to  the Council Regulation (EU) No 692/2014 (OJ L183, p. 9) it shall be prohibited to import into European Union goods originating in Crimea or Sevastopol.<br/>The prohibition shall not apply in respect of: <br/>(a) the execution until 26 September 2014, of trade contracts concluded before 25 June 2014, or of ancillary contracts necessary for the execution of such contracts, provided that the natural or legal persons, entity or body seeking to perform the contract have notified, at least 10 working days in advance, the activity or transaction to the competent authority of the Member State in which they are established. <br/>(b) goods originating in Crimea or Sevastopol which have been made available to the Ukrainian authorities for examination, for which compliance with the conditions conferring entitlement to preferential origin has been verified and for which a certificate of origin has been issued in accordance with Regulation (EU) No 978/2012 and Regulation (EU) No 374/2014 or in accordance with the EU-Ukraine Association Agreement."
+             ],
+             "pattern": "^(.*)$"
+           }
+         }
+       }
+     },
+     "heading": {
+       "$id": "#/properties/heading",
+       "type": "object",
+       "title": "The Heading Schema",
+       "required": [
+         "goods_nomenclature_item_id",
+         "description",
+         "formatted_description",
+         "description_plain"
+       ],
+       "properties": {
+         "goods_nomenclature_item_id": {
+           "$id": "#/properties/heading/properties/goods_nomenclature_item_id",
+           "type": "string",
+           "title": "The Goods_nomenclature_item_id Schema",
+           "default": "",
+           "examples": [
+             "0102000000"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "description": {
+           "$id": "#/properties/heading/properties/description",
+           "type": "string",
+           "title": "The Description Schema",
+           "default": "",
+           "examples": [
+             "Live bovine animals"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "formatted_description": {
+           "$id": "#/properties/heading/properties/formatted_description",
+           "type": "string",
+           "title": "The Formatted_description Schema",
+           "default": "",
+           "examples": [
+             "Live bovine animals"
+           ],
+           "pattern": "^(.*)$"
+         },
+         "description_plain": {
+           "$id": "#/properties/heading/properties/description_plain",
+           "type": "string",
+           "title": "The Description_plain Schema",
+           "default": "",
+           "examples": [
+             "Live bovine animals"
+           ],
+           "pattern": "^(.*)$"
+         }
+       }
+     },
+     "ancestors": {
+       "$id": "#/properties/ancestors",
+       "type": "array",
+       "title": "The Ancestors Schema",
+       "items": {
+         "$id": "#/properties/ancestors/items",
+         "type": "object",
+         "title": "The Items Schema",
+         "required": [
+           "producline_suffix",
+           "description",
+           "number_indents",
+           "goods_nomenclature_item_id",
+           "formatted_description",
+           "description_plain"
+         ],
+         "properties": {
+           "producline_suffix": {
+             "$id": "#/properties/ancestors/items/properties/producline_suffix",
+             "type": "string",
+             "title": "The Producline_suffix Schema",
+             "default": "",
+             "examples": [
+               "10"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "description": {
+             "$id": "#/properties/ancestors/items/properties/description",
+             "type": "string",
+             "title": "The Description Schema",
+             "default": "",
+             "examples": [
+               "Cattle"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "number_indents": {
+             "$id": "#/properties/ancestors/items/properties/number_indents",
+             "type": "integer",
+             "title": "The Number_indents Schema",
+             "default": 0,
+             "examples": [
+             ]
+           },
+           "goods_nomenclature_item_id": {
+             "$id": "#/properties/ancestors/items/properties/goods_nomenclature_item_id",
+             "type": "string",
+             "title": "The Goods_nomenclature_item_id Schema",
+             "default": "",
+             "examples": [
+               "0102210000"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "formatted_description": {
+             "$id": "#/properties/ancestors/items/properties/formatted_description",
+             "type": "string",
+             "title": "The Formatted_description Schema",
+             "default": "",
+             "examples": [
+               "Cattle"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "description_plain": {
+             "$id": "#/properties/ancestors/items/properties/description_plain",
+             "type": "string",
+             "title": "The Description_plain Schema",
+             "default": "",
+             "examples": [
+               "Cattle"
+             ],
+             "pattern": "^(.*)$"
+           }
+         }
+       }
+     },
+     "_response_info": {
+       "$id": "#/properties/_response_info",
+       "type": "object",
+       "title": "The _response_info Schema",
+       "required": [
+         "links"
+       ],
+       "properties": {
+         "links": {
+           "$id": "#/properties/_response_info/properties/links",
+           "type": "array",
+           "title": "The Links Schema",
+           "items": {
+             "$id": "#/properties/_response_info/properties/links/items",
+             "type": "object",
+             "title": "The Items Schema",
+             "required": [
+               "rel",
+               "href"
+             ],
+             "properties": {
+               "rel": {
+                 "$id": "#/properties/_response_info/properties/links/items/properties/rel",
+                 "type": "string",
+                 "title": "The Rel Schema",
+                 "default": "",
+                 "examples": [
+                   "self"
+                 ],
+                 "pattern": "^(.*)$"
+               },
+               "href": {
+                 "$id": "#/properties/_response_info/properties/links/items/properties/href",
+                 "type": "string",
+                 "title": "The Href Schema",
+                 "default": "",
+                 "examples": [
+                   "/trade-tariff/commodities/0102211000.json"
+                 ],
+                 "pattern": "^(.*)$"
+               }
+             }
+           }
+         }
+       }
+     }
+   }
+ }

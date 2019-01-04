@@ -1,0 +1,301 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/root.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "required": [
+        "goods_nomenclature_sid",
+        "goods_nomenclature_item_id",
+        "description",
+        "formatted_description",
+        "section",
+        "chapter_note_id",
+        "section_id",
+        "chapter_note",
+        "headings",
+        "_response_info"
+    ],
+    "properties": {
+        "goods_nomenclature_sid": {
+            "$id": "#/properties/goods_nomenclature_sid",
+            "type": "integer",
+            "title": "The Goods_nomenclature_sid Schema",
+            "default": 0,
+            "examples": [
+                27623
+            ]
+        },
+        "goods_nomenclature_item_id": {
+            "$id": "#/properties/goods_nomenclature_item_id",
+            "type": "string",
+            "title": "The Goods_nomenclature_item_id Schema",
+            "default": "",
+            "examples": [
+                "0100000000"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "description": {
+            "$id": "#/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "examples": [
+                "LIVE ANIMALS"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "formatted_description": {
+            "$id": "#/properties/formatted_description",
+            "type": "string",
+            "title": "The Formatted_description Schema",
+            "default": "",
+            "examples": [
+                "Live animals"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "section": {
+            "$id": "#/properties/section",
+            "type": "object",
+            "title": "The Section Schema",
+            "required": [
+                "id",
+                "title",
+                "position",
+                "numeral",
+                "section_note"
+            ],
+            "properties": {
+                "id": {
+                    "$id": "#/properties/section/properties/id",
+                    "type": "integer",
+                    "title": "The Id Schema",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "title": {
+                    "$id": "#/properties/section/properties/title",
+                    "type": "string",
+                    "title": "The Title Schema",
+                    "default": "",
+                    "examples": [
+                        "Live animals; animal products"
+                    ],
+                    "pattern": "^(.*)$"
+                },
+                "position": {
+                    "$id": "#/properties/section/properties/position",
+                    "type": "integer",
+                    "title": "The Position Schema",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "numeral": {
+                    "$id": "#/properties/section/properties/numeral",
+                    "type": "string",
+                    "title": "The Numeral Schema",
+                    "default": "",
+                    "examples": [
+                        "I"
+                    ],
+                    "pattern": "^(.*)$"
+                },
+                "section_note": {
+                    "$id": "#/properties/section/properties/section_note",
+                    "type": "string",
+                    "title": "The Section_note Schema",
+                    "default": "",
+                    "examples": [
+                        "* 1\\. Any reference in this section to a particular genus or species of an animal, except where the context otherwise requires, includes a reference to the young of that genus or species.\r\n* 2\\. Except where the context otherwise requires, throughout the nomenclature any reference to 'dried' products also covers products which have been dehydrated, evaporated or freeze-dried.\r\n"
+                    ],
+                    "pattern": "^(.*)$"
+                }
+            }
+        },
+        "chapter_note_id": {
+            "$id": "#/properties/chapter_note_id",
+            "type": "integer",
+            "title": "The Chapter_note_id Schema",
+            "default": 0,
+            "examples": [
+                46
+            ]
+        },
+        "section_id": {
+            "$id": "#/properties/section_id",
+            "type": "integer",
+            "title": "The Section_id Schema",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "chapter_note": {
+            "$id": "#/properties/chapter_note",
+            "type": "string",
+            "title": "The Chapter_note Schema",
+            "default": "",
+            "examples": [
+                "* 1\\. This chapter covers all live animals except:\r\n  * (a) fish and crustaceans, molluscs and other aquatic invertebrates, of heading 0301, 0306, 0307 or 0308;\r\n  * (b) cultures of micro-organisms and other products of heading 3002; and\r\n  * (c) animals of heading 9508."
+            ],
+            "pattern": "^(.*)$"
+        },
+        "headings": {
+            "$id": "#/properties/headings",
+            "type": "array",
+            "title": "The Headings Schema",
+            "items": {
+                "$id": "#/properties/headings/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "required": [
+                    "goods_nomenclature_sid",
+                    "goods_nomenclature_item_id",
+                    "declarable",
+                    "description",
+                    "producline_suffix",
+                    "leaf",
+                    "description_plain",
+                    "formatted_description",
+                    "children"
+                ],
+                "properties": {
+                    "goods_nomenclature_sid": {
+                        "$id": "#/properties/headings/items/properties/goods_nomenclature_sid",
+                        "type": "integer",
+                        "title": "The Goods_nomenclature_sid Schema",
+                        "default": 0,
+                        "examples": [
+                            27624
+                        ]
+                    },
+                    "goods_nomenclature_item_id": {
+                        "$id": "#/properties/headings/items/properties/goods_nomenclature_item_id",
+                        "type": "string",
+                        "title": "The Goods_nomenclature_item_id Schema",
+                        "default": "",
+                        "examples": [
+                            "0101000000"
+                        ],
+                        "pattern": "^(.*)$"
+                    },
+                    "declarable": {
+                        "$id": "#/properties/headings/items/properties/declarable",
+                        "type": "boolean",
+                        "title": "The Declarable Schema",
+                        "default": false,
+                        "examples": [
+                            false
+                        ]
+                    },
+                    "description": {
+                        "$id": "#/properties/headings/items/properties/description",
+                        "type": "string",
+                        "title": "The Description Schema",
+                        "default": "",
+                        "examples": [
+                            "Live horses, asses, mules and hinnies"
+                        ],
+                        "pattern": "^(.*)$"
+                    },
+                    "producline_suffix": {
+                        "$id": "#/properties/headings/items/properties/producline_suffix",
+                        "type": "string",
+                        "title": "The Producline_suffix Schema",
+                        "default": "",
+                        "examples": [
+                            "80"
+                        ],
+                        "pattern": "^(.*)$"
+                    },
+                    "leaf": {
+                        "$id": "#/properties/headings/items/properties/leaf",
+                        "type": "boolean",
+                        "title": "The Leaf Schema",
+                        "default": false,
+                        "examples": [
+                            true
+                        ]
+                    },
+                    "description_plain": {
+                        "$id": "#/properties/headings/items/properties/description_plain",
+                        "type": "string",
+                        "title": "The Description_plain Schema",
+                        "default": "",
+                        "examples": [
+                            "Live horses, asses, mules and hinnies"
+                        ],
+                        "pattern": "^(.*)$"
+                    },
+                    "formatted_description": {
+                        "$id": "#/properties/headings/items/properties/formatted_description",
+                        "type": "string",
+                        "title": "The Formatted_description Schema",
+                        "default": "",
+                        "examples": [
+                            "Live horses, asses, mules and hinnies"
+                        ],
+                        "pattern": "^(.*)$"
+                    },
+                    "children": {
+                        "$id": "#/properties/headings/items/properties/children",
+                        "type": "array",
+                        "title": "The Children Schema"
+                    }
+                }
+            }
+        },
+        "_response_info": {
+            "$id": "#/properties/_response_info",
+            "type": "object",
+            "title": "The _response_info Schema",
+            "required": [
+                "links"
+            ],
+            "properties": {
+                "links": {
+                    "$id": "#/properties/_response_info/properties/links",
+                    "type": "array",
+                    "title": "The Links Schema",
+                    "items": {
+                        "$id": "#/properties/_response_info/properties/links/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "required": [
+                            "rel",
+                            "href"
+                        ],
+                        "properties": {
+                            "rel": {
+                                "$id": "#/properties/_response_info/properties/links/items/properties/rel",
+                                "type": "string",
+                                "title": "The Rel Schema",
+                                "default": "",
+                                "examples": [
+                                    "self"
+                                ],
+                                "pattern": "^(.*)$"
+                            },
+                            "href": {
+                                "$id": "#/properties/_response_info/properties/links/items/properties/href",
+                                "type": "string",
+                                "title": "The Href Schema",
+                                "default": "",
+                                "examples": [
+                                    "/trade-tariff/chapters/01.json"
+                                ],
+                                "pattern": "^(.*)$"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

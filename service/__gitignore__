@@ -1,0 +1,14 @@
+.DS_Store
+.vscode/
+.idea/
+*.iml
+*.log
+*.swp
+*.swo
+.classpath
+.project
+dependency-reduced-pom.xml
+target/
+docker/vault/config/core
+docker/vault/config/logical
+docker/vault/config/sys

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath uk.gov.defra.tracesx.tradetariff.TradetariffApplication</exec.args>
+                <exec.executable>java</exec.executable>
+                <Env.TRADETARIFF_PORT>8089</Env.TRADETARIFF_PORT>
+                <Env.tradetariff.client.connectionTimeout>30000</Env.tradetariff.client.connectionTimeout>
+                <Env.tradetariff.client.readTimeout>30000</Env.tradetariff.client.readTimeout>
+                <Env.TRADETARIFF_CLIENT_SCHEME>https</Env.TRADETARIFF_CLIENT_SCHEME>
+                <Env.TRADETARIFF_CLIENT_HOST>www.trade-tariff.service.gov.uk</Env.TRADETARIFF_CLIENT_HOST>
+                <Env.TRADETARIFF_CLIENT_PORT>443</Env.TRADETARIFF_CLIENT_PORT>
+                <Env.TRADETARIFF_CLIENT_PATH>trade-tariff/sections.json</Env.TRADETARIFF_CLIENT_PATH>
+                <Env.tradetariff.sections>1</Env.tradetariff.sections>
+                <Env.tradetariff.chapters>01</Env.tradetariff.chapters>
+                <Env.DATABASE_DB_CONNECTION_STRING>jdbc:h2:mem:testdb</Env.DATABASE_DB_CONNECTION_STRING>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath uk.gov.defra.tracesx.tradetariff.TradetariffApplication</exec.args>
+                <exec.executable>java</exec.executable>
+                <Env.TRADETARIFF_PORT>8089</Env.TRADETARIFF_PORT>
+                <Env.tradetariff.client.connectionTimeout>30000</Env.tradetariff.client.connectionTimeout>
+                <Env.tradetariff.client.readTimeout>30000</Env.tradetariff.client.readTimeout>
+                <Env.TRADETARIFF_CLIENT_SCHEME>https</Env.TRADETARIFF_CLIENT_SCHEME>
+                <Env.TRADETARIFF_CLIENT_HOST>www.trade-tariff.service.gov.uk</Env.TRADETARIFF_CLIENT_HOST>
+                <Env.TRADETARIFF_CLIENT_PORT>443</Env.TRADETARIFF_CLIENT_PORT>
+                <Env.TRADETARIFF_CLIENT_PATH>trade-tariff/sections.json</Env.TRADETARIFF_CLIENT_PATH>
+                <Env.tradetariff.sections>1</Env.tradetariff.sections>
+            </properties>
+        </action>
+    </actions>
